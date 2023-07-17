@@ -11,14 +11,12 @@ let jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 exports.index = (req, res) => {
-    res.render('index', {layout: 'indexLayout.hbs', title: 'MCC QRCode Site'})
+    res.render('index', { title: 'MCC QRCode Site'})
 }
 
 exports.home = (req, res) => { //Ide már a belogolt user kell, megírni majd a login processt, most csak visual miatt simán rendereli
-    getAllEventList(5)
-    .then(limitedEventList => {
-            res.render('home', {layout: 'layout.hbs', limitedEventList: limitedEventList, title: 'Dashboard'})
-    })
+   
+            res.render('home', {layout: 'layout.hbs', title: 'Dashboard'})
 }
 
 exports.login = (multer.array(), (req, res) => {
