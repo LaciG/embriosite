@@ -11,7 +11,7 @@ let jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 exports.index = (req, res) => {
-    res.render('index', { title: 'MCC QRCode Site'})
+    res.render('index', { layout: 'indexLayout.hbs', title: 'MCC QRCode Site'})
 }
 
 exports.home = (req, res) => { //Ide már a belogolt user kell, megírni majd a login processt, most csak visual miatt simán rendereli

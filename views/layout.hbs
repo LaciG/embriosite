@@ -1,8 +1,131 @@
-<html>
-    <head>
-        <title>EMBRIO</title>
-    </head>
-    <body>
-        {{{ body }}}
-    </body>
+<!DOCTYPE html>
+<html lang="en" class=" scrollbar-type-1 sb-cyan">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Metro 4 -->
+    <link rel="stylesheet" href="vendors/metro4/css/metro-all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="icon" href="images/logos/icon.png" sizes="32x32">
+
+    <title>{{{ title }}}</title>
+
+    <script>
+        window.on_page_functions = [];
+    </script>
+</head>
+<body class="m4-cloak h-vh-100">
+<div data-role="navview" data-toggle="#paneToggle" data-expand="xl" data-compact="lg" data-active-state="true">
+    <div class="navview-pane">
+        <div class="bg-cyan d-flex flex-align-center">
+            <button class="pull-button m-0 bg-darkCyan-hover">
+                <span class="mif-menu fg-white"></span>
+            </button>
+            <h2 class="text-light m-0 fg-white pl-7" style="line-height: 52px"><img src="images/logos/logo.png" /></h2>
+        </div>
+
+        <div class="suggest-box">
+            <input type="text" data-role="input" data-clear-button="false" data-search-button="true">
+            <button class="holder">
+                <span class="mif-search fg-white"></span>
+            </button>
+        </div>
+
+        <ul class="navview-menu mt-4" id="side-menu">
+            <li class="item-header">Navigáció menü1</li>
+            <li>
+                <a href="#dashboard">
+                    <span class="icon"><span class="mif-meter"></span></span>
+                    <span class="caption">menü1</span>
+                </a>
+            </li>
+            <li>
+               <a href="#">
+                    <span class="icon"><span class="mif-brightness-auto fg-red"></span></span>
+                    <span class="caption">menü2</span>
+                </a>
+            </li>
+
+            <li class="item-header">Navigáció menü2</li>
+            <li>
+                <a href="#">
+                    <span class="icon"><span class="mif-brightness-auto fg-red"></span></span>
+                    <span class="caption">menü3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><span class="mif-brightness-auto fg-red"></span></span>
+                    <span class="caption">menü4</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="w-100 text-center text-small data-box p-2 border-top bd-grayMouse" style="position: absolute; bottom: 0">
+            <div>&copy; 2023 László Gábor</div>
+        </div>
+    </div>
+
+    <div class="navview-content h-100">
+        <div data-role="appbar" class="pos-absolute bg-darkCyan fg-white">
+
+            <a href="#" class="app-bar-item d-block d-none-lg" id="paneToggle"><span class="mif-menu"></span></a>
+
+            <div class="app-bar-container ml-auto">
+                <a href="#" class="app-bar-item">
+                    <span class="mif-envelop"></span>
+                    <span class="badge bg-green fg-white mt-2 mr-1">4</span>
+                </a>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-bell"></span>
+                    <span class="badge bg-orange fg-white mt-2 mr-1">10</span>
+                </a>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-flag"></span>
+                    <span class="badge bg-red fg-white mt-2 mr-1">9</span>
+                </a>
+                <div class="app-bar-container">
+                    <a href="#" class="app-bar-item">
+                        <img src="images/jek_vorobey.jpg" class="avatar">
+                        <span class="ml-2 app-bar-name">NAME HERE</span>
+                    </a>
+                    <div class="user-block shadow-1" data-role="collapse" data-collapsed="true">
+                        <div class="bg-darkCyan fg-white p-2 text-center">
+                            <img src="images/jek_vorobey.jpg" class="avatar">
+                            <div class="h4 mb-0">NAME HERE</div>
+                            <div>Title is needed</div>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2">
+                            <button class="button flat-button">Followers</button>
+                            <button class="button flat-button">Sales</button>
+                            <button class="button flat-button">Friends</button>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2 bg-light">
+                            <button class="button mr-1">Profil</button>
+                            <a href="/logout"><button class="button ml-1">Kijelentkezés</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-wrapper" class="content-inner h-100" style="overflow-y: auto">
+            {{{ body }}}
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery first, then Metro UI JS -->
+<script src="vendors/jquery/jquery-3.4.1.min.js"></script>
+<script src="vendors/chartjs/Chart.bundle.min.js"></script>
+<script src="vendors/qrcode/qrcode.min.js"></script>
+<script src="vendors/jsbarcode/JsBarcode.all.min.js"></script>
+<script src="vendors/ckeditor/ckeditor.js"></script>
+<script src="vendors/metro4/js/metro.min.js"></script>
+<script src="js/index.js"></script>
+</body>
 </html>
