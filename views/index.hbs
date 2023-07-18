@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <!-- Metro 4 -->
-    <link rel="stylesheet" href="vendors/metro4/css/metro-all.min.css">
-    <link rel="stylesheet" href="css/index.css">
-
-    <title>Pandora :: Log in</title>
-</head>
-<body class="m4-cloak h-vh-100 d-flex flex-justify-center flex-align-center">
-
     <div class="login-box">
         <form class="bg-white p-4"
               action="/login"
@@ -21,34 +6,19 @@
               data-clear-invalid="2000"
               data-on-error-form="invalidForm"
         >
-            <img src="images/p-120x120.png" class="place-right mt-4-minus mr-6-minus">
-            <h1 class="mb-0">EMBRIO</h1>
+            <img src="images/logos/E_Logo.png" class="place-right mt-4-minus mr-6-minus">
+            <h1 class="mb-0"><img src="images/logos/logo.png" /></h1>
             <div class="text-muted mb-4">Jelentkezz be a folytatáshoz</div>
             <div class="form-group">
-                <input type="email" name="email" data-role="input" placeholder="Email" data-append="<span class='mif-envelop'>" data-validate="required">
-                <span class="invalid_feedback">Please enter a valid email address</span>
+                <input type="email" name="email" data-role="input" placeholder="E-mail cím" data-append="<span class='mif-envelop'>" data-validate="required">
+                <span class="invalid_feedback">Kérjük valós címet adjon meg</span>
             </div>
             <div class="form-group">
-                <input type="password" name="password" data-role="input" placeholder="Password" data-append="<span class='mif-key'>" data-validate="required">
-                <span class="invalid_feedback">Please enter a password</span>
+                <input type="password" name="password" data-role="input" placeholder="Jelszó" data-append="<span class='mif-key'>" data-validate="required">
+                <span class="invalid_feedback">Kérjük adjon meg egy jelszót</span>
             </div>
             <div class="form-group d-flex flex-align-center flex-justify-between">
                 <button class="button primary">Belépés</button>
             </div>
         </form>
     </div>
-
-
-    <script src="vendors/jquery/jquery-3.4.1.min.js"></script>
-    <script src="vendors/metro4/js/metro.min.js"></script>
-    <script>
-        function invalidForm(){
-            var form  = $(this);
-            form.addClass("ani-ring");
-            setTimeout(function(){
-                form.removeClass("ani-ring");
-            }, 1000);
-        }
-    </script>
-</body>
-</html>
